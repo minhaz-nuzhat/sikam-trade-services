@@ -20,26 +20,26 @@
       --pt: clamp(26px, 3.2vh, 52px);
       --pb: clamp(26px, 3.2vh, 48px);
 
-      --g900: #0d1210;
-      --g800: #131918;
-      --g750: #192422;
-      --g700: #1f302e;
+      --g900: #f5f0e8;
+      --g800: #ece6db;
+      --g750: #ddd7cc;
+      --g700: #c8c2b6;
       --g600: #1c5247;
       --g500: #174540;
       --g450: #1c5247;
       --g400: #247a72;
-      --g300: #c9a255;
-      --g200: #d4b872;
-      --g100: #e2d0a0;
+      --g300: #b8862e;
+      --g200: #c99840;
+      --g100: #d4aa58;
 
-      --t-ghost: #1c3830;
-      --t-dim:   #2a4e46;
-      --t-mid:   #3d6860;
-      --t-sec:   #5a8880;
-      --t-ter:   #7aa098;
-      --t-pri:   #a0bcb6;
-      --t-brt:   #c8d8d2;
-      --t-wht:   #ede8dc;
+      --t-ghost: #2089a0;
+      --t-dim:   #8fb8b0;
+      --t-mid:   #5a7870;
+      --t-sec:   #485e58;
+      --t-ter:   #3a4e48;
+      --t-pri:   #2a3830;
+      --t-brt:   #1e2c28;
+      --t-wht:   #111c18;
     }
 
     html, body {
@@ -52,9 +52,9 @@
       font-family: 'Space Grotesk', sans-serif;
       color: var(--t-pri);
       background:
-        radial-gradient(ellipse 85% 75% at -8% 110%, rgba(28, 82, 71, 0.28) 0%, transparent 55%),
-        radial-gradient(ellipse 55% 50% at 108% -8%, rgba(4, 6, 6, 0.95) 0%, transparent 50%),
-        linear-gradient(148deg, #070b09 0%, #060908 45%, #050807 100%);
+        radial-gradient(ellipse 85% 75% at -8% 110%, rgba(28, 82, 71, 0.08) 0%, transparent 55%),
+        radial-gradient(ellipse 55% 50% at 108% -8%, rgba(200, 190, 170, 0.4) 0%, transparent 55%),
+        linear-gradient(148deg, #ede8dc 0%, #e8e2d5 50%, #e2dbd0 100%);
     }
 
     body::before {
@@ -62,8 +62,8 @@
       position: fixed;
       inset: 0;
       background-image:
-        linear-gradient(rgba(50, 130, 58, 0.016) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(50, 130, 58, 0.016) 1px, transparent 1px);
+        linear-gradient(rgba(28, 82, 71, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(28, 82, 71, 0.04) 1px, transparent 1px);
       background-size: 80px 80px;
       pointer-events: none;
       z-index: 1;
@@ -74,7 +74,7 @@
       position: fixed;
       inset: 0 0 auto 0;
       height: var(--bh);
-      background: rgba(5, 14, 6, 0.97);
+      background: rgba(237, 232, 220, 0.97);
       border-bottom: 1px solid var(--g700);
       display: flex;
       align-items: center;
@@ -196,7 +196,7 @@
       line-height: 0.85;
     }
 
-    /* "TRADE" — bold, near-white */
+    /* "TRADE" — bold, dark charcoal */
     .hw--bold {
       font-weight: 800;
       color: var(--t-wht);
@@ -614,7 +614,7 @@
 
       <!-- Logo mark -->
       <div class="logo">
-        <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sikam Trade Services mark">
+        <svg width="46" height="46" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sikam Trade Services mark">
           <!-- outer teal ring -->
           <circle cx="17" cy="17" r="15.5" stroke="#2089a0" stroke-width="1.4"/>
           <!-- inner dashed forest-green orbit ring -->
@@ -660,8 +660,9 @@
         </div>
         <div class="ci">
           <span class="ci__top">House # 40 (Level-3),</span>
-          <span class="ci__bot">Road # 27 (Old), 16 (New), Dhanmondi</span>
-          <span class="ci__bot">Dhaka-1209, Bangladesh</span>
+          <span class="ci__bot">Road # 27 (Old), 16 (New),</span>
+          <span class="ci__bot">Dhanmondi, Dhaka-1209,</span>
+          <span class="ci__bot">Bangladesh</span>
         </div>
         <div class="ci">
           <a href="mailto:sikamtrade@gmail.com" class="ci__top">sikamtrade@gmail.com</a>
