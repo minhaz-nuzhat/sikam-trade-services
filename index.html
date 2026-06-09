@@ -164,9 +164,9 @@
 
     .hw {
       font-family: 'Syne', sans-serif;
-      font-size: clamp(36px, min(7.5vw, 11.5vh), 100px);
+      font-size: clamp(28px, min(5.5vw, 8.5vh), 72px);
       line-height: 0.88;
-      letter-spacing: -0.025em;
+      letter-spacing: -0.03em;
       display: block;
     }
 
@@ -188,10 +188,12 @@
       color: var(--t-sec);
     }
 
-    /* "SIKAM" — teal */
+    /* "SIKAM" — teal, larger than TRADE/SERVICES */
     .hw--ghost {
-      font-weight: 400;
+      font-weight: 800;
       color: #2089a0;
+      font-size: clamp(44px, min(9vw, 13.5vh), 116px);
+      line-height: 0.85;
     }
 
     /* "TRADE" — bold, near-white */
@@ -481,8 +483,13 @@
 
       /* hero type: small enough that SERVICES (8 chars) never overflows */
       .hw {
-        font-size: clamp(26px, 8.5vw, 40px);
+        font-size: clamp(22px, 7vw, 36px);
         line-height: 0.9;
+      }
+
+      .hw--ghost {
+        font-size: clamp(38px, 12.5vw, 60px);
+        line-height: 0.85;
       }
 
       /* 20+ stat: inline not stacked */
@@ -638,9 +645,8 @@
       </div>
 
       <p class="body-copy">
-        End-to-end sourcing, trade finance, and shipment of petroleum,
-        fertilizers, and minerals. Sales agency and Gulf region gas field
-        accessories, all in experienced hands.
+        End-to-end sourcing, Trade Finance, Shipment of Petroleum products,
+        Fertilizers, and other Minerals - all in experienced hands.
       </p>
 
       <div class="h-rule"></div>
@@ -651,8 +657,9 @@
           <span class="ci__bot">Sikam Trade Services</span>
         </div>
         <div class="ci">
-          <span class="ci__top">House 40 · Road 27/16</span>
-          <span class="ci__bot">Dhanmondi · Dhaka-1209 · BD</span>
+          <span class="ci__top">House # 40 (Level-3),</span>
+          <span class="ci__bot">Road # 27 (Old), 16 (New), Dhanmondi</span>
+          <span class="ci__bot">Dhaka-1209, Bangladesh</span>
         </div>
         <div class="ci">
           <a href="mailto:sikamtrade@gmail.com" class="ci__top">sikamtrade@gmail.com</a>
@@ -669,11 +676,11 @@
       <ul class="svc">
         <li class="svc__item">Sourcing</li>
         <li class="svc__item">Trade Finance Solutions</li>
-        <li class="svc__item">Petroleum — Shipments</li>
+        <li class="svc__item">Petroleum Products</li>
         <li class="svc__item">Fertilizers</li>
-        <li class="svc__item">Sulphur, Rock Phosphate &amp; Minerals</li>
-        <li class="svc__item">Petroleum Sales Agency</li>
-        <li class="svc__item">Gulf Gas Field Accessories</li>
+        <li class="svc__item">Sulphur, Rock Phosphate + Other Minerals</li>
+        <li class="svc__item">Sales Agency for Petroleum & </li>
+        <li class="svc__item">Gas Field-Related Accessories</li>
       </ul>
 
       <p class="credibility">
