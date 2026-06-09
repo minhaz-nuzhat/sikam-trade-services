@@ -429,10 +429,10 @@
     ══════════════════════════════ */
     @media (max-width: 640px) {
       :root {
-        --bh: 24px;
-        --pl: 24px;
-        --pt: 20px;
-        --pb: 20px;
+        --bh: 22px;
+        --pl: 20px;
+        --pt: 14px;
+        --pb: 14px;
       }
 
       html, body { overflow: hidden; }
@@ -442,36 +442,60 @@
         grid-template-rows: 1fr auto;
       }
 
-      /* ── LEFT col takes the top portion ── */
+      /* ── Logo ── */
+      .logo {
+        margin-bottom: 8px;
+      }
+
+      /* ── LEFT col ── */
       .col-l {
         border-right: none;
         border-bottom: 1px solid var(--g800);
-        padding: var(--pt) var(--pl) 18px;
-        gap: 0;
-        justify-content: space-between;
+        padding: var(--pt) var(--pl) 12px;
+        justify-content: flex-start;
+        gap: clamp(8px, 1.6vh, 14px);
       }
 
-      .page-label { margin-bottom: 14px; }
+      /* hide the bracketed label on mobile — saves a full row */
+      .page-label { display: none; }
 
-      .page-label__seg { font-size: 9px; }
-
+      /* hero type: small enough that SERVICES (8 chars) never overflows */
       .hw {
-        font-size: clamp(48px, 16vw, 80px);
+        font-size: clamp(26px, 8.5vw, 40px);
+        line-height: 0.9;
+      }
+
+      /* 20+ stat: inline not stacked */
+      .years-stat {
+        flex-direction: row;
+        align-items: baseline;
+        gap: 8px;
+        margin-bottom: 0;
+      }
+
+      .years-stat__num {
+        font-size: clamp(18px, 5vw, 26px);
+      }
+
+      .years-stat__label {
+        font-size: 10px;
+        letter-spacing: 0.18em;
       }
 
       .body-copy {
-        font-size: 15px;
-        line-height: 1.6;
-        margin-top: 12px;
+        font-size: 13px;
+        line-height: 1.55;
+        margin-top: 0;
         max-width: 100%;
       }
 
       .h-rule { display: none; }
 
+      /* Contact: 2-col, compact */
       .contact-strip {
         grid-template-columns: 1fr 1fr;
-        gap: 10px 16px;
-        margin-top: 14px;
+        gap: 8px 12px;
+        margin-top: 0;
         padding-right: 0;
       }
 
@@ -479,12 +503,12 @@
         grid-column: 1 / -1;
       }
 
-      .ci__top { font-size: 14px; }
-      .ci__bot { font-size: 13px; }
+      .ci__top { font-size: 12px; }
+      .ci__bot { font-size: 11px; }
 
-      /* ── RIGHT col shrinks to a services bar ── */
+      /* ── RIGHT col: services bar ── */
       .col-r {
-        padding: 16px var(--pl) 20px;
+        padding: 12px var(--pl) 14px;
         overflow: hidden;
         flex-direction: column;
         justify-content: flex-start;
@@ -492,36 +516,41 @@
 
       .sec-label {
         font-size: 9px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
 
+      /* single column list on mobile — no wrapping mid-word */
       .svc {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 6px 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        flex-wrap: nowrap;
       }
 
       .svc__item {
-        font-size: 14px;
-        gap: 8px;
+        font-size: 13px;
+        gap: 10px;
       }
 
-      .svc__item::before { width: 12px; min-width: 12px; }
+      .svc__item::before { width: 10px; min-width: 10px; }
 
-      /* Circle: smaller, tucked bottom-right */
+      /* hide credibility blurb — saves space */
+      .credibility { display: none; }
+
+      /* Circle: small, bottom-right corner of services */
       .geo-circle {
-        width: clamp(120px, 45vw, 200px);
-        transform: translate(42%, 30%);
+        width: clamp(90px, 32vw, 150px);
+        transform: translate(42%, 28%);
       }
 
       @keyframes circleIn {
-        from { transform: translate(42%, 30%) scale(0.78); opacity: 0; }
-        to   { transform: translate(42%, 30%) scale(1);    opacity: 1; }
+        from { transform: translate(42%, 28%) scale(0.78); opacity: 0; }
+        to   { transform: translate(42%, 28%) scale(1);    opacity: 1; }
       }
 
       @keyframes breathe {
-        0%, 100% { transform: translate(42%, 30%) scale(1); }
-        50%       { transform: translate(42%, 30%) scale(1.04); }
+        0%, 100% { transform: translate(42%, 28%) scale(1); }
+        50%       { transform: translate(42%, 28%) scale(1.04); }
       }
     }
 
